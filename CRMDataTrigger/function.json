@@ -1,0 +1,9 @@
+{
+    "bindings": [{
+        "name": "message",
+        "type": "serviceBusTrigger",
+        "direction": "in",
+        "queueName":"sb-poc-q-dev",
+        "connection":"sbpocqueuedev_SERVICEBUS"
+    }]
+}
