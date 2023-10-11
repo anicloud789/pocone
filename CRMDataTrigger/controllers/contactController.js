@@ -3,12 +3,15 @@ const customErrorHandler = require('../errorHandling/customErrorHandler');
 
 module.exports = async function (context, req) {
     try {
+
+        context.log("req=>",req);
+        
         const action = req.query.action; // Assume action is 'get', 'create', 'update', or 'delete'
         const contactId = req.query.contactId; // Assuming the contact ID is passed
 
 
         context.log("action=>",action);
-        context.log("req=>",req);
+        
 
         // Based on the action, invoke appropriate method in salesforceService
         if (action === 'getAll') {
